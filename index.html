@@ -4,78 +4,94 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Post Craft Studio</title>
+
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f9f9f9;
-    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0d0d0d;
+    color: #f5f5f5;
 }
 
 header {
-    background: #111;
-    color: white;
-    padding: 40px 20px;
     text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
 }
 
 header h1 {
-    margin: 0;
-    font-size: 32px;
+    font-size: 40px;
+    color: #d4af37;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
 }
 
 header p {
-    margin-top: 10px;
     font-size: 18px;
-    color: #ccc;
+    color: #cccccc;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #ff4d4d;
-    color: white;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: #d4af37;
+    color: black;
     text-decoration: none;
-    border-radius: 5px;
     font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #f1c40f;
+    transform: scale(1.05);
 }
 
 section {
-    padding: 50px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
 h2 {
-    margin-bottom: 20px;
+    color: #d4af37;
+    margin-bottom: 40px;
+    font-size: 28px;
 }
 
-.services, .pricing {
+.container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .card {
-    background: white;
-    padding: 25px;
+    background: #1a1a1a;
+    padding: 30px;
     width: 280px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    border: 1px solid #d4af37;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(212,175,55,0.6);
 }
 
 .price {
-    font-size: 24px;
-    color: #ff4d4d;
+    font-size: 26px;
+    color: #d4af37;
     margin: 15px 0;
 }
 
 footer {
-    background: #111;
-    color: white;
+    background: black;
     padding: 20px;
     text-align: center;
+    color: #888;
+    font-size: 14px;
 }
 </style>
 </head>
@@ -83,44 +99,44 @@ footer {
 <body>
 
 <header>
-    <h1>Post Craft Studio</h1>
-    <p>Crafting High-Converting Instagram Posts for Local Businesses</p>
-    <a href="#contact" class="btn">Get Custom Designs</a>
+    <h1>POST CRAFT STUDIO</h1>
+    <p>Premium Instagram Post Designs for Local Businesses</p>
+    <a href="#contact" class="btn">Start Your Project</a>
 </header>
 
 <section>
-    <h2>Our Services</h2>
-    <div class="services">
+    <h2>Our Expertise</h2>
+    <div class="container">
         <div class="card">
-            <h3>Salon Posts</h3>
-            <p>Stylish & elegant posts to attract more clients.</p>
+            <h3>Salon Branding</h3>
+            <p>Luxury & elegant social media creatives.</p>
         </div>
         <div class="card">
             <h3>Gym Promotions</h3>
-            <p>High-energy fitness creatives that convert.</p>
+            <p>Bold fitness designs that convert viewers into clients.</p>
         </div>
         <div class="card">
-            <h3>Shop Offers</h3>
-            <p>Eye-catching sale & discount announcements.</p>
+            <h3>Retail Campaigns</h3>
+            <p>Eye-catching offers & seasonal sale posts.</p>
         </div>
     </div>
 </section>
 
 <section>
     <h2>Pricing</h2>
-    <div class="pricing">
+    <div class="container">
         <div class="card">
-            <h3>Basic Package</h3>
+            <h3>Basic</h3>
             <div class="price">₹999</div>
             <p>3 Custom Posts</p>
         </div>
         <div class="card">
-            <h3>Standard Package</h3>
+            <h3>Standard</h3>
             <div class="price">₹1999</div>
             <p>6 Custom Posts</p>
         </div>
         <div class="card">
-            <h3>Premium Package</h3>
+            <h3>Premium</h3>
             <div class="price">₹3999</div>
             <p>12 Custom Posts</p>
         </div>
@@ -128,14 +144,15 @@ footer {
 </section>
 
 <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Ready to grow your Instagram?</p>
-    <a href="https://wa.me/919843833902" class="btn">Chat on WhatsApp</a>
+    <h2>Let's Build Your Brand</h2>
+    <p>Ready to elevate your Instagram presence?</p>
+    <a href="https://wa.me/91YOURNUMBER" class="btn">Chat on WhatsApp</a>
 </section>
 
 <footer>
-    © 2026 Post Craft Studio | Designed with creativity
+    © 2026 Post Craft Studio | Crafted with Excellence
 </footer>
 
 </body>
+</html>
 </html>
