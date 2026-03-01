@@ -6,92 +6,127 @@
 <title>Post Craft Studio</title>
 
 <style>
+html { scroll-behavior: smooth; }
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background-color: #0d0d0d;
+    background: #0d0d0d;
     color: #f5f5f5;
+    line-height: 1.7;
+}
+
+/* Scroll Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 140px 20px;
     background: linear-gradient(135deg, #000000, #1a1a1a);
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 52px;
     color: #d4af37;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
 }
 
 header p {
-    font-size: 18px;
-    color: #cccccc;
+    font-size: 22px;
+    max-width: 700px;
+    margin: auto;
+    color: #bbbbbb;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 30px;
+    margin-top: 40px;
+    padding: 16px 45px;
     background: #d4af37;
     color: black;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 30px;
-    transition: 0.3s;
+    border-radius: 50px;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
-    background: #f1c40f;
-    transform: scale(1.05);
+    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(212,175,55,0.8);
 }
 
 section {
-    padding: 70px 20px;
+    padding: 120px 20px;
     text-align: center;
 }
 
 h2 {
+    font-size: 38px;
     color: #d4af37;
-    margin-bottom: 40px;
-    font-size: 28px;
+    margin-bottom: 70px;
 }
 
 .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 25px;
+    gap: 40px;
 }
 
 .card {
     background: #1a1a1a;
-    padding: 30px;
-    width: 280px;
-    border-radius: 15px;
+    padding: 45px;
+    width: 300px;
+    border-radius: 25px;
     border: 1px solid #d4af37;
-    transition: 0.3s;
+    transition: 0.4s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 20px rgba(212,175,55,0.6);
+    transform: translateY(-15px);
+    box-shadow: 0 0 35px rgba(212,175,55,0.7);
 }
 
 .price {
-    font-size: 26px;
+    font-size: 30px;
     color: #d4af37;
-    margin: 15px 0;
+    margin: 20px 0;
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 50px;
+    background: #111;
+    border-radius: 25px;
+    border: 1px solid #d4af37;
+}
+
+.testimonial p {
+    font-size: 20px;
+    font-style: italic;
+    color: #cccccc;
+}
+
+.testimonial h4 {
+    margin-top: 20px;
+    color: #d4af37;
 }
 
 footer {
     background: black;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
-    color: #888;
-    font-size: 14px;
+    color: #777;
 }
 </style>
 </head>
@@ -100,29 +135,29 @@ footer {
 
 <header>
     <h1>POST CRAFT STUDIO</h1>
-    <p>Premium Instagram Post Designs for Local Businesses</p>
+    <p>Premium Instagram Post Designs That Turn Followers Into Customers & Make Your Brand Stand Out.</p>
     <a href="#contact" class="btn">Start Your Project</a>
 </header>
 
-<section>
+<section class="reveal">
     <h2>Our Expertise</h2>
     <div class="container">
         <div class="card">
             <h3>Salon Branding</h3>
-            <p>Luxury & elegant social media creatives.</p>
+            <p>Luxury Instagram creatives designed to attract high-paying clients.</p>
         </div>
         <div class="card">
             <h3>Gym Promotions</h3>
-            <p>Bold fitness designs that convert viewers into clients.</p>
+            <p>Bold, energetic visuals that drive engagement and memberships.</p>
         </div>
         <div class="card">
             <h3>Retail Campaigns</h3>
-            <p>Eye-catching offers & seasonal sale posts.</p>
+            <p>High-converting sale & seasonal promotional posts.</p>
         </div>
     </div>
 </section>
 
-<section>
+<section class="reveal">
     <h2>Pricing</h2>
     <div class="container">
         <div class="card">
@@ -143,8 +178,20 @@ footer {
     </div>
 </section>
 
-<section id="contact">
-    <h2>Let's Build Your Brand</h2>
+<section class="reveal">
+    <h2>What Clients Say</h2>
+    <div class="testimonial">
+        <p>"Post Craft Studio transformed our Instagram. We started getting inquiries within days!"</p>
+        <h4>— Local Salon Owner</h4>
+    </div>
+    <div class="testimonial">
+        <p>"Professional, fast and premium designs. Highly recommended!"</p>
+        <h4>— Gym Studio Manager</h4>
+    </div>
+</section>
+
+<section id="contact" class="reveal">
+    <h2>Let’s Build Your Brand</h2>
     <p>Ready to elevate your Instagram presence?</p>
     <a href="https://wa.me/91YOURNUMBER" class="btn">Chat on WhatsApp</a>
 </section>
@@ -153,6 +200,19 @@ footer {
     © 2026 Post Craft Studio | Crafted with Excellence
 </footer>
 
+<script>
+window.addEventListener('scroll', function() {
+    const reveals = document.querySelectorAll('.reveal');
+    for (let i = 0; i < reveals.length; i++) {
+        let windowHeight = window.innerHeight;
+        let elementTop = reveals[i].getBoundingClientRect().top;
+        let elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add('active');
+        }
+    }
+});
+</script>
+
 </body>
-</html>
 </html>
